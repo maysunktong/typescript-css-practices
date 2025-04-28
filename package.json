@@ -1,0 +1,13 @@
+{
+  "name": "ts-basic",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "node ./src/index.js",
+    "ts": "tsc && node ./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

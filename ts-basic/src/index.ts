@@ -51,9 +51,13 @@ const sayName = (myName: string): string => {
 console.log(sayName("Gurkan"));
 // console.log(sayName(22)); num not allowed
 
-const squareOfNumber = (num: number): void => {
+const squareOfNumber = (num: number): void => { /* no return any meaningful value */
   num * num;
 };
+/* void is often used for:
+Functions that update state
+Event handlers (like onClick)
+Functions with side effects (but no output) */
 console.log(`Type of square is ${typeof squareOfNumber(2)}`);
 
 let age: string | number = "12";
@@ -95,6 +99,8 @@ let chihuahua: Dog = {
 
 // Type aliases
 type jobTitle = string;
+type accountType = "User" | "Admin";/* allow to be only these two values */
+
 
 type Person = {
   firstName: string,
@@ -110,6 +116,9 @@ let May: Person = {
   age: 32,
   alive: true,
 };
+
+May.firstName = "Patrick"
+console.log(May.firstName) /* Patrick */
 
 type Parent = Person & {
   children: number,
@@ -129,4 +138,23 @@ let Merlock: Parent = {
     lifespan: 2,
     european: false,
   },
+};
+
+/* Generic Type */
+let genericExample = <T>(data: T): T => {
+  return data;
+}
+
+genericExample(<string>"Bangkok");
+genericExample(<number>34);
+
+/* Props */
+/* export interface */
+interface MyComponentProps {
+  title: string,
+  data: number
+}
+
+const MyComponent = ({ title, data }: MyComponentProps) => {
+  /* argument */
 };

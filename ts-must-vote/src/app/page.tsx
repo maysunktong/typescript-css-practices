@@ -47,8 +47,8 @@ export default function Home() {
       </div>
       <h1>{result}</h1>
       <div>
-        <button onClick={() => castVote("julmust")} type="button">Julmust</button>
-        <button onClick={() => castVote("påsmust")} type="button" >Påsmust</button>
+        <button onClick={() => castVote("julmust")} type="button"><h1>Julmust</h1></button>
+        <button onClick={() => castVote("påsmust")} type="button" ><h1>Påsmust</h1></button>
       </div>
 
       <button onClick={() => resetVote()} type="button">Restart Vote</button>

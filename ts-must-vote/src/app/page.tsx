@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  type Drink = "julmust" | "påsmust";
-
   type Votes = {
     "julmust": number,
     "påsmust": number
@@ -12,7 +10,7 @@ export default function Home() {
   const [votes, setVotes] = useState<Votes>({ julmust: 0, påsmust: 0 });
   const [result, setResult] = useState<string>("Let's vote!");
 
-  const castVote = (drink: Drink) => {
+  const castVote = (drink: "julmust" | "påsmust") => {
     return setVotes(prev => ({
       ...prev, [drink]: prev[drink] + 1
     }))

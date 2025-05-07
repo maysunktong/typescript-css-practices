@@ -3,6 +3,7 @@ import { PokemonType } from "@/utils/types";
 import { useState, useEffect } from "react";
 import Pokemon from "../components/pokemon";
 
+
 export default function Home() {
   const [caughtPokemon, setCaughtPokemon] = useState<PokemonType | null>(null);
 

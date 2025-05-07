@@ -1,7 +1,6 @@
-import React from 'react';
 import FetchButton from "./fetchButton";
 
-const Pokemon = ({ id, name, image, types, onClick }: PokemonProps & FetchButtonProps): JSX.Element => {
+const Pokemon = ({ id, name, image, types, onClick }: PokemonProps & FetchButtonProps) => {
   return (<div className="flex flex-col items-center">
     <img src={image} alt={name} className="w-100" />
     <div className="font-bold text-2xl pb-2">

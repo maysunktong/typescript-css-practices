@@ -7,8 +7,20 @@
   --breakpoint-may: 400px;
 }
 
+/* This has the highest cascade priority and will overwrite everything */
+/* h1 {
+  @apply text-2xl font-semibold text-red-800;
+} */
+
 @layer base {
   h1 {
     @apply text-2xl font-semibold text-gray-800;
   }
 }
+
+/* This overwrites base */
+/* @layer base {
+  h1 {
+    @apply text-2xl font-semibold text-green-800;
+  }
+} */

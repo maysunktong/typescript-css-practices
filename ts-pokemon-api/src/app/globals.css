@@ -4,6 +4,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-roboto: var(--font-roboto);
+  --breakpoint-may: 400px;
 }
 
 @layer base {

@@ -1,6 +1,7 @@
-import { PokemonType } from "../utils/types";
+import React from 'react';
+import FetchButton from "./fetchButton";
 
-const Pokemon = ({ id, name, image, types }: PokemonType) => {
+const Pokemon = ({ id, name, image, types, onClick }: PokemonProps & FetchButtonProps): JSX.Element => {
   return (<div className="flex flex-col items-center">
     <img src={image} alt={name} className="w-100" />
     <div className="font-bold text-2xl pb-2">
@@ -8,6 +9,7 @@ const Pokemon = ({ id, name, image, types }: PokemonType) => {
       <p>Name: {name}</p>
       <p>Types: {types.join(", ")}</p>
     </div>
+    <FetchButton onClick={onClick} />
   </div>);
 }
 export default Pokemon;

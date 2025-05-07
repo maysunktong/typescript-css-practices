@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
 
@@ -38,11 +37,9 @@ const Navigation = () => {
   return (
     <StyledNav>
       {links.map((link) => (
-        <Link key={link.href} href={link.href} passHref>
-          <StyledAnchor $active={pathname === link.href}>
-            {link.label}
-          </StyledAnchor>
-        </Link>
+        <StyledAnchor key={link.href} href={link.href} $active={pathname === link.href}>
+          {link.label}
+        </StyledAnchor>
       ))}
     </StyledNav>
   );

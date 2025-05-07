@@ -1,3 +1,5 @@
+import StoryBox from "../components/storyBox";
+
 export default function Home() {
-  return <div>home</div>;
+  return <div><StoryBox /></div>;
 }
